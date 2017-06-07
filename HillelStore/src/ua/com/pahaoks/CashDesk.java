@@ -49,6 +49,7 @@ public class CashDesk {
         double cartAmount = cart.getAmount();
         
         if (this.cashier != null) {
+            customer.pay();
             check = new Check(timeInterval, cartAmount, this.cashier.getName(), this.number);
         } else {
             throw new Exception("Кассир не инициализирован");
