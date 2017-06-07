@@ -15,4 +15,8 @@ public class AbstractCustomer {
     public AbstractCustomer(Cart cart) {
         this.cart = cart;
     } 
+    
+    public Cart getCart() {
+        return cart;
+    }
 }

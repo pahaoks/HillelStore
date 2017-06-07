@@ -16,17 +16,17 @@ public class PatientCustomer extends AbstractCustomer implements Customer{
     }
     @Override
     public void addToCart() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       
     }
 
     @Override
     public void pay() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Don't hurry, I can wait");
     }
 
     @Override
     public Cart getCart() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return super.getCart();
     }
     
 }

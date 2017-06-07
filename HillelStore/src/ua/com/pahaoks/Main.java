@@ -6,7 +6,6 @@
 package ua.com.pahaoks;
 
 import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  *
@@ -29,7 +28,7 @@ public class Main {
                                      new Item("Молоко", 1, 18.0f) })));
         }
         
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < customersQty >> 1; i++) {
             customers.add(
                 new ShortTemperedCustomer(
                     new Cart(
@@ -40,5 +39,8 @@ public class Main {
         
         store.handleCustomer(customers);
         
+        System.out.println("Общая выручка магазина: " + store.getAmount() + " грн.");
+        
+        store.close();
     }
 }

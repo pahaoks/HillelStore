@@ -27,7 +27,7 @@ public class ShortTemperedCustomer extends AbstractCustomer implements Customer 
 
     @Override
     public Cart getCart() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return super.getCart();
     }
     
 }
