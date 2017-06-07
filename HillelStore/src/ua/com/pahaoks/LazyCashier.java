@@ -18,7 +18,7 @@ public class LazyCashier extends AbstractCashier {
     
     @Override
     public int ScanCart(Cart cart) {
-        return 0;
+        return super.ScanCart(cart) + delay();
     }
 
     @Override

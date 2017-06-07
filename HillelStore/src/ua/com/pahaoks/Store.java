@@ -13,4 +13,5 @@ public interface Store {
     void open();
     void close();
     void handleCustomer(Customer customer);
+    CashDesk getCashDesk(int num);
 }

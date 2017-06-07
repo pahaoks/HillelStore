@@ -25,7 +25,7 @@ public abstract class AbstractStore implements Store {
     
     public AbstractStore(int cashDesksQty) {
         for (int i = 0; i < cashDesksQty; i++) {
-            cashDesks.add(new CashDesk((byte)(i + 1), new FastCashier("Вася")));
+            cashDesks.add(new CashDesk((byte)i, new FastCashier("Вася")));
         }
     }
     
@@ -34,6 +34,11 @@ public abstract class AbstractStore implements Store {
             case grocery: return new GroceryStore(cashDesksCount);
             default: return null;
         }
+    }
+    
+    @Override
+    public CashDesk getCashDesk(int num) {
+        return this.cashDesks.get(num);
     }
     
     @Override
@@ -76,4 +81,12 @@ public abstract class AbstractStore implements Store {
         return ret;
     }
     
+    public int getCashierTimeInterval(String cashierName) {
+        int ret = 0;
+        for (Check check : checks) {
+            if (cashierName.equals(check.cashierName))
+                ret += check.timeSec;
+        }        
+        return ret;
+    }
 }

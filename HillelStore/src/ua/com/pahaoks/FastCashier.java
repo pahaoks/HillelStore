@@ -18,7 +18,7 @@ public class FastCashier extends AbstractCashier implements Cashier {
     
     @Override
     public int ScanCart(Cart cart) {
-        return super.ScanCart(cart);
+        return super.ScanCart(cart) + delay();
     }
 
     @Override
@@ -30,6 +30,4 @@ public class FastCashier extends AbstractCashier implements Cashier {
     public String getName() {
         return this.name;
     }
-
-    
 }

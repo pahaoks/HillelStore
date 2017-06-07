@@ -28,6 +28,10 @@ public class CashDesk {
         this.cashier = cashier;
     }
     
+    public Cashier getCashier() {
+        return this.cashier;
+    }
+    
     public CashDeskState getState() {
         return state;
     }
@@ -45,7 +49,7 @@ public class CashDesk {
         double cartAmount = cart.getAmount();
         
         if (this.cashier != null) {
-            check = new Check(timeInterval, cartAmount, this.cashier.getName());
+            check = new Check(timeInterval, cartAmount, this.cashier.getName(), this.number);
         } else {
             throw new Exception("Кассир не инициализирован");
         }

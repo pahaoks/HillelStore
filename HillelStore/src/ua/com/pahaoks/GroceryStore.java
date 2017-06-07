@@ -27,12 +27,11 @@ public class GroceryStore extends AbstractStore {
 
     @Override
     public boolean printCheck() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return true;
     }
 
     @Override
     public String getStoreType() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }
